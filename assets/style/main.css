@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* 共通 */
+body {
+  margin: 0 auto;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  color: #333;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+/* 変数 */
+.header__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2.5641025641vw 2.3076923077vw 2.5641025641vw 3.0769230769vw;
+}
+.header__link {
+  display: block;
+}
+.header__arrow-image {
+  margin-bottom: 1.0256410256vw;
+}
+
+.btn {
+  border-radius: 5.1282051282vw;
+  font-size: 3.0769230769vw;
+  line-height: 1.75;
+  padding: 2.3076923077vw 2.3076923077vw 2.5641025641vw 2.8205128205vw;
+}
+
+.btn--pink {
+  background-color: #fa7da3;
+}
+
+.btn--green {
+  background-color: #49c43d;
+}
+
+.cover {
+  background-color: #fa7da3;
+  background-image: url("/assets/image/main_visual_sp.jpg");
+  background-size: 100%;
+  background-position: center center;
+  height: 81.7948717949vw;
+}
+.cover__title {
+  font-size: 10.7692307692vw;
+  margin: 5.1282051282vw 0 0 4.1025641026vw;
+}
+.cover__container {
+  display: flex;
+  justify-content: space-between;
+}
+.cover__items {
+  display: flex;
+  align-items: center;
+  background-color: #fca4bf;
+  padding: 6.1538461538vw 5.8974358974vw 6.1538461538vw 6.6666666667vw;
+  box-shadow: 2px 2px 4px gray;
+}
+.cover__text--font-color-pink {
+  background-color: #FFF;
+  color: #fa7da3;
+  font-size: 3.3333333333vw;
+  font-weight: bold;
+  padding: 1.2820512821vw 0.7692307692vw 1.5384615385vw 1.0256410256vw;
+  margin-right: 3.8461538462vw;
+}
+.cover__text--font-color-white {
+  color: #FFF;
+  font-size: 6.1538461538vw;
+  font-weight: bold;
+}
+.cover__price {
+  font-size: 19.4871794872vw;
+  font-weight: bold;
+  color: #fffd7a;
+  line-height: 0.76;
+}
+.cover__price--font-small {
+  font-size: 9.2307692308vw;
+}
+.cover__price-month {
+  color: #FFF;
+  text-align: right;
+  padding-right: 7.1794871795vw;
+}
+.cover__points {
+  margin: 6.4102564103vw 6.6666666667vw 0 6.6666666667vw;
+}
+.cover__point {
+  border: 1px solid #FFF;
+  text-align: center;
+  margin-bottom: 3.0769230769vw;
+  color: #FFF;
+  font-size: 4.6153846154vw;
+}
+
+.present {
+  background-color: #fffedd;
+}
+.present__title {
+  font-size: 5.3846153846vw;
+  font-weight: normal;
+  color: #fa7da3;
+}/*# sourceMappingURL=main.css.map */

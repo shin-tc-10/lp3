@@ -138,6 +138,7 @@ li {
     font-size: vw(12);
     line-height: 1.75;
     padding: vw(9) vw(9) vw(10) vw(11);
+    display: block;
 }
 .btn--pink {
     background-color: #fa7da3;
@@ -148,9 +149,9 @@ li {
 
 .cover {
     background-color: #fa7da3;
-    background-image: url('/assets/image/main_visual_sp.jpg');
-    background-size: 100%;
-    background-position: center center;
+    background-image: url('/assets/image/main_visual_sp.png');
+    background-position: bottom left;
+    background-size: 55%;
     height: vw(319);
     &__title {
         font-size: vw(42);
@@ -167,7 +168,7 @@ li {
         align-items: center;
         background-color: #fca4bf;
         padding: vw(24) vw(23) vw(24) vw(26);
-        box-shadow: 2px 2px 4px gray;
+        box-shadow: 4px 4px #e77497;
     }
 
     &__text--font-color-pink {
@@ -212,11 +213,394 @@ li {
 
 .present {
     background-color: #fffedd;
-    &__title {
+    padding: vw(25) vw(21) vw(16) vw(21);
+    &__container {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+    &__text {
         font-size: vw(21);
         font-weight: normal;
         color: #fa7da3;
+        position: relative;
+        text-align: center;
+        margin-bottom: vw(16);
+    }
+    &__text::before,
+    &__text::after {
+        position: relative;
+        display: inline-block;
+        content: "";
+        background: #fa7da3;
+        width: 2px;
+        height: 1em;
+        margin-top: -.2em;
+        vertical-align: middle;
+    }
+    &__text::before {
+        transform: rotate(-35deg);
+        margin-right: vw(10);
+    }
+    &__text::after {
+        transform: rotate(35deg);
+        margin-left: vw(0);
+    }
+    &__content {
+        text-align: center;
+    }
+    &__text--background-pink {
+        background-color: #fa7da3;
+        color: #FFF;
+        border-radius: vw(10) vw(10) 0 0;
+        border: 1px solid #fa7da3;
+        padding: vw(7) 0;
+        font-size: vw(21);
+    }
+    &__text--background-white {
+        background-color: #FFF;
+        border-radius: 0 0 vw(10) vw(10);
+        border: 1px solid #fa7da3;
+        padding: vw(14) 0;
+        font-size: vw(27);
+        color: #fa7da3;
+    }
+    &__text-three {
+        font-size: vw(42);
+        font-weight: 600;
+    }
+    &__description {
+        font-size: vw(10);
+        text-align: center;
+        margin-top: vw(10);
+    }
+}
+
+.application {
+    padding: vw(20) vw(20) vw(30) vw(20);
+
+    &__container {
+
+    }
+
+    &__text {
+        font-size: vw(21);
+        color: #fa7da3;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: vw(13);
+    }
+    &__btn {
+        font-size: vw(21);
+        border-radius: vw(40);
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* ボタン全体に横幅を与えると「右端に寄る」が明確に */
+    }
+
+    &__btn-text {
+        width: vw(200);
+        margin: 0 vw(50)
+    }
+}
+
+.free-trial {
+    padding: 0 vw(20) vw(40) vw(20);
+    &__text {
+        font-size: vw(17);
+        text-align: center;
+        padding: vw(12) 0;
+        font-weight: 600;
+        color: #50bfff;
+        border-top: 1px solid #50bfff;
+        border-bottom: 1px solid #50bfff;
+    }
+    &__hair-removal {
+        margin-top: vw(15);
+    }
+    &__course {
+        font-size: vw(14);
+    }
+    &__text--mini {
+        font-size: vw(11);
+    }
+}
+
+.select-points {
+    background-color: #fdf0f5;
+    padding: vw(41) vw(21);
+    &__title {
+        font-size: vw(18);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    &__three-point {
+        font-size: 32px;
+        text-align: center;
+        color: #fa7da3;
+        font-weight: bold;
+    }
+    &__content {
+        margin-top: vw(32);
+    }
+    &__heading {
+        background-color: #fa7da3;
+        color: #fff;
+        font-size: vw(18);
+        text-align: center;
+        padding: vw(14) 0;
+        border-radius: vw(10) vw(10) 0 0;
+        border: 1px solid #fa7da3;
+
+    }
+    &__description {
+        background-color: #fff;
+        padding: vw(20) vw(21);
+        text-align: center;
+        border: 1px solid #fa7da3;
+        border-radius: 0 0 vw(10) vw(10);
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+        margin-top: vw(10);
+        justify-content: space-between;
+    }
+    &__text {
+        text-align: left;
+    }
+    &__item {
+        text-align: center;
+        width: vw(143);
+    }
+    &__image {
+        border: 1px solid #fa7da3;
+        padding: 0 vw(38);
+        height: vw(85);
+        display: flex;
+        align-items: center;
+    }
+    &__menu {
+        font-size: vw(14);
+        margin-top: vw(9);
+    }
+    &__store-name {
+        height: vw(85);
+        padding: 0 vw(36);
+        font-size: vw(18);
+        border: 1px solid #666666;
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+        font-size: vw(14);
+    }
+    &__plan {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: vw(12);
+    }
+    &__plan-item {
+        width: vw(100);
+        aspect-ratio: 1 / 1;
+    }
+    &__full-body-plan-text {
+        font-size: vw(23);
+        font-weight: 600;
+        margin-bottom: vw(28);
+    }
+    &__text-point-two {
+        font-size: vw(14);
+        margin-bottom: vw(18);
+    }
+    &__partial-hair-removal-plan {
+        font-size: vw(23);
+        font-weight: 600;
+        margin: vw(58) vw(28) vw(28);
+    }
+    &__point-two {
+        padding: vw(20) 0;
+    }
+    &__plan-text {
+        font-size: vw(14);
+        color: #fa7da3;
+        font-weight: 600;
+    }
+}
+
+.two-courses {
+    padding: 0 vw(21);
+    &__container {
+        text-align: center;
+    }
+    &__content {
+        margin-bottom: vw(30);
+    }
+    &__title {
+        font-size: vw(18);
+    }
+    &__two-course {
+        font-size: vw(32);
+        font-weight: bold;
+        color: #fa7da3;
+        margin-bottom: vw(31);
+    }
+    &__first {
+        background-color: #fdf0f5;
+        border-radius: vw(10) vw(10) 0 0;
+        font-size: vw(18);
+        color: #fa7da3;
+        padding: vw(15) 0;
+        border: 1px solid #fa7da3;
+        border-bottom: none;
+    }
+    &__description {
+        border: 1px solid #fa7da3;
+        border-top: none;
+        border-radius: 0 0 vw(10) vw(10);
+        padding: vw(20) vw(21);
+    }
+    &__text {
+        text-align: left;
+        margin-bottom: vw(20);
+    }
+    &__second {
+        background-color: #fdf0f5;
+        border-radius: vw(10) vw(10) 0 0;
+        font-size: vw(18);
+        color: #fa7da3;
+        padding: vw(15) 0;
+        border: 1px solid #fa7da3;
+        border-bottom: none;
+    }
+}
+
+.reviews {
+    background-color: #fdf0f5;
+    padding: vw(37) 0 0 0;
+    &__title {
+        font-size: vw(31.89);
+        font-weight: bold;
+        color: #fa7da3;
+        text-align: center;
+        margin: 0 0 vw(26) 0;
+    }
+    .is-active {
+        display: block;
+    }
+    &__items {
+        overflow: visible; // ←左右はみ出しを見せるため
+    }
+
+    // &__item {
+    //     margin-right: vw(15);
+    // }
+    .reviews__items .slick-slide {
+        padding: 0 7.5px; // 両側で合計15px
+        box-sizing: border-box;
+      }
+    
+    &__dots {
+        margin-top: vw(16);
+        display: flex;
+        justify-content: center;
+        gap: vw(8);
+        @include mq() {
+            margin-top: vwt(16);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(16);
+        }
+    }
+    
+    &__dot {
+        width: vw(9);
+        height: vw(9);
+        border-radius: 50%;
+        background-color: #ccc;
+        display: block;
+        margin: 0 vw(4);
+        cursor: pointer;
+        transition: background-color 0.3s;
+        @include mq() {
+            width: vwt(9);
+            height: vwt(9);
+            margin: 0 vwt(4);
+        }
+        @include mq(lg) {
+            width: px2Rem(9);
+            height: px2Rem(9);
+            margin: 0 px2Rem(4);
+        }
+    }
+
+    .slick-active &__dot {
+        background-color: #00AFBF;
+    }
+
+    .slick-track {
+        height: vw(340);
+        @include mq() {
+            height: vwt(388);
+        }
+        @include mq(lg) {
+            height: px2Rem(388);
+        }
+    }
+    
+    .slick-slider {
+        display: flex;
+        position: relative;
+        align-items: center;
+    }
+    .slick-dots {
+        position:absolute;
+        bottom: 5%;
+        left: 50%;
+        display: flex;
+        transform: translate(-50%, -50%);
+    }
+    &__menu {
+        background-color: #fa7da3;
+        color: #fff;
+        font-size: vw(18);
+        text-align: center;
+        padding: vw(14) 0;
+        border-radius: vw(10) vw(10) 0 0;
+        border: 1px solid #fa7da3;
+    }
+    &__description {
+        background-color: #fff;
+        padding: vw(20) 0;
+        text-align: center;
+        border: 1px solid #fa7da3;
+        border-radius: 0 0 vw(10) vw(10);
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        width: vw(178);
+        text-align: left;
+    }
+    &__img {
+        margin: 0 vw(15);
+    }
+    &__reviewer-info {
+        color: #fa7da3;
+        font-size: vw(16);
+    }
+    &__text {
+        font-size: vw(14);
     }
 }
 
 
+.footer {
+    background-color: #fa7da3;
+    text-align: center;
+    padding: vw(14) 0 vw(11) 0;
+}

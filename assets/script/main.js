@@ -2,12 +2,13 @@ $(() => {
     // お客様の声スライド
     const $items = $('.reviews__item');
     $('.reviews__items').slick({
-        slidesToShow: 1,
+        slidesToShow: 3,
         centerMode: true,
         centerPadding: '40px',
         arrows: false,
+        variableWidth: true,
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         customPaging: function (slider, i) {
             return '<span class="reviews__dot"></span>';
@@ -24,8 +25,9 @@ $(() => {
             {
                 breakpoint: 9999,
                 settings: {
-                slidesToShow: 3,
                 centerMode: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
                 }
             }
         ]

@@ -27,17 +27,42 @@ li {
 }
 
 /* 変数 */
+/* ヘッダー */
 .header__container {
+  max-width: 1030px;
+  margin-inline: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 2.5641025641vw 2.3076923077vw 2.5641025641vw 3.0769230769vw;
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    height: 9.0291262136vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .header__container {
+    height: 5.8125rem;
+  }
+}
+.header__btns {
+  display: flex;
 }
 .header__link {
   display: block;
 }
 .header__arrow-image {
   margin-bottom: 1.0256410256vw;
+}
+@media screen and (min-width: 768px) {
+  .header__arrow-image {
+    margin-bottom: 0.3883495146vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .header__arrow-image {
+    margin-bottom: 0.25rem;
+  }
 }
 
 .btn {
@@ -47,15 +72,32 @@ li {
   padding: 2.3076923077vw 2.3076923077vw 2.5641025641vw 2.8205128205vw;
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .btn {
+    padding: 0.5825242718vw 2.5242718447vw;
+    border-radius: 2.4446601942vw;
+    font-size: 2.0582524272vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .btn {
+    padding: 0.375rem 1.625rem;
+    border-radius: 1.57375rem;
+    font-size: 1.325rem;
+  }
+}
 
 .btn--pink {
   background-color: #fa7da3;
+  margin-right: 0.9708737864vw;
 }
 
 .btn--green {
   background-color: #49c43d;
+  padding: 0.375rem 1.125rem;
 }
 
+/* メインビジュアル */
 .cover {
   background-color: #fa7da3;
   background-image: url("/assets/image/main_visual_sp.png");
@@ -63,20 +105,62 @@ li {
   background-size: 55%;
   height: 81.7948717949vw;
 }
+@media screen and (min-width: 768px) {
+  .cover {
+    height: 59.4174757282vw;
+    background-image: url("/assets/image/main_visual_pc.png");
+    background-size: 33%;
+    background-position: calc(19% + 20px) bottom;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover {
+    height: 38.25rem;
+  }
+}
 .cover__title {
   font-size: 10.7692307692vw;
   margin: 5.1282051282vw 0 0 4.1025641026vw;
 }
+@media screen and (min-width: 768px) {
+  .cover__title {
+    margin: 0 0 0 1.5533980583vw;
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__title {
+    margin: 0 0 0 1rem;
+  }
+}
 .cover__container {
   display: flex;
   justify-content: space-between;
+  max-width: 1030px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .cover__container {
+    justify-content: space-evenly;
+  }
 }
 .cover__items {
   display: flex;
   align-items: center;
   background-color: #fca4bf;
-  padding: 6.1538461538vw 5.8974358974vw 6.1538461538vw 6.6666666667vw;
   box-shadow: 4px 4px #e77497;
+}
+@media screen and (min-width: 768px) {
+  .cover__items {
+    padding: 2.3300970874vw 5.8252427184vw;
+    margin-right: 0.9708737864vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__items {
+    padding: 1.5rem 3.75rem;
+    margin-right: 1.25rem;
+  }
 }
 .cover__text--font-color-pink {
   background-color: #FFF;
@@ -86,10 +170,34 @@ li {
   padding: 1.2820512821vw 0.7692307692vw 1.5384615385vw 1.0256410256vw;
   margin-right: 3.8461538462vw;
 }
+@media screen and (min-width: 768px) {
+  .cover__text--font-color-pink {
+    padding: 1.1650485437vw 0.7766990291vw 1.1650485437vw 0.9708737864vw;
+    margin-right: 1.4563106796vw;
+    font-size: 2.8398058252vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__text--font-color-pink {
+    padding: 0.75rem 0.5rem 0.75rem 0.625rem;
+    margin-right: 0.9375rem;
+    font-size: 1.828125rem;
+  }
+}
 .cover__text--font-color-white {
   color: #FFF;
   font-size: 6.1538461538vw;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .cover__text--font-color-white {
+    font-size: 5.2427184466vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__text--font-color-white {
+    font-size: 3.375rem;
+  }
 }
 .cover__price {
   font-size: 19.4871794872vw;
@@ -97,16 +205,70 @@ li {
   color: #fffd7a;
   line-height: 0.76;
 }
+@media screen and (min-width: 768px) {
+  .cover__price {
+    font-size: 16.6019417476vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__price {
+    font-size: 10.6875rem;
+  }
+}
 .cover__price--font-small {
   font-size: 9.2307692308vw;
+}
+@media screen and (min-width: 768px) {
+  .cover__price--font-small {
+    font-size: 7.8640776699vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__price--font-small {
+    font-size: 5.0625rem;
+  }
 }
 .cover__price-month {
   color: #FFF;
   text-align: right;
   padding-right: 7.1794871795vw;
 }
+@media screen and (min-width: 768px) {
+  .cover__price-month {
+    padding-right: 2.5708737864vw;
+    font-size: 2.5708737864vw;
+    margin-right: 5.8252427184vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__price-month {
+    padding-right: 1.655rem;
+    font-size: 1.655rem;
+    margin-right: 3.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cover__price-month---small {
+    font-size: 1.6524271845vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__price-month---small {
+    font-size: 1.06375rem;
+  }
+}
 .cover__points {
   margin: 6.4102564103vw 6.6666666667vw 0 6.6666666667vw;
+}
+@media screen and (min-width: 768px) {
+  .cover__points {
+    margin: 4.1747572816vw 1.9417475728vw 0 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__points {
+    margin: 2.6875rem 1.25rem 0 0;
+  }
 }
 .cover__point {
   border: 1px solid #FFF;
@@ -115,13 +277,37 @@ li {
   color: #FFF;
   font-size: 4.6153846154vw;
 }
+@media screen and (min-width: 768px) {
+  .cover__point {
+    margin-bottom: 5.1282051282vw;
+    font-size: 2.7184466019vw;
+    line-height: 2.4;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .cover__point {
+    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
+  }
+}
 
+/* 今だけプレゼント */
 .present {
   background-color: #fffedd;
   padding: 6.4102564103vw 5.3846153846vw 4.1025641026vw 5.3846153846vw;
 }
+@media screen and (min-width: 768px) {
+  .present {
+    padding: 3.2038834951vw 2.0388349515vw 1.5533980583vw 2.0388349515vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present {
+    padding: 2.0625rem 1.3125rem 1rem 1.3125rem;
+  }
+}
 .present__container {
-  max-width: 1200px;
+  max-width: 550px;
   margin-inline: auto;
 }
 .present__text {
@@ -132,19 +318,51 @@ li {
   text-align: center;
   margin-bottom: 4.1025641026vw;
 }
+@media screen and (min-width: 768px) {
+  .present__text {
+    font-size: 3.3009708738vw;
+    margin-bottom: 1.5533980583vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present__text {
+    font-size: 2.125rem;
+    margin-bottom: 1rem;
+  }
+}
 .present__text::before, .present__text::after {
   position: relative;
   display: inline-block;
   content: "";
   background: #fa7da3;
-  width: 2px;
+  width: 0.5128205128vw;
   height: 1em;
   margin-top: -0.2em;
   vertical-align: middle;
 }
+@media screen and (min-width: 768px) {
+  .present__text::before, .present__text::after {
+    width: 0.1941747573vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present__text::before, .present__text::after {
+    width: 0.125rem;
+  }
+}
 .present__text::before {
   transform: rotate(-35deg);
   margin-right: 2.5641025641vw;
+}
+@media screen and (min-width: 768px) {
+  .present__text::before {
+    margin-right: 0.9708737864vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present__text::before {
+    margin-right: 0.625rem;
+  }
 }
 .present__text::after {
   transform: rotate(35deg);
@@ -161,6 +379,20 @@ li {
   padding: 1.7948717949vw 0;
   font-size: 5.3846153846vw;
 }
+@media screen and (min-width: 768px) {
+  .present__text--background-pink {
+    border-radius: 0.9708737864vw 0.9708737864vw 0 0;
+    padding: 0.6796116505vw 0;
+    font-size: 2.0388349515vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present__text--background-pink {
+    border-radius: 0.625rem 0.625rem 0 0;
+    padding: 0.4375rem 0;
+    font-size: 1.3125rem;
+  }
+}
 .present__text--background-white {
   background-color: #FFF;
   border-radius: 0 0 2.5641025641vw 2.5641025641vw;
@@ -169,18 +401,69 @@ li {
   font-size: 6.9230769231vw;
   color: #fa7da3;
 }
+@media screen and (min-width: 768px) {
+  .present__text--background-white {
+    border-radius: 0 0 0.9708737864vw 0.9708737864vw;
+    padding: 1.359223301vw 0;
+    font-size: 2.6213592233vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present__text--background-white {
+    border-radius: 0 0 0.625rem 0.625rem;
+    padding: 0.875rem 0;
+    font-size: 1.6875rem;
+  }
+}
 .present__text-three {
   font-size: 10.7692307692vw;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .present__text-three {
+    font-size: 4.0776699029vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present__text-three {
+    font-size: 2.625rem;
+  }
 }
 .present__description {
   font-size: 2.5641025641vw;
   text-align: center;
   margin-top: 2.5641025641vw;
 }
+@media screen and (min-width: 768px) {
+  .present__description {
+    font-size: 0.9708737864vw;
+    margin-top: 0.9708737864vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .present__description {
+    font-size: 0.625rem;
+    margin-top: 0.625rem;
+  }
+}
 
+/* カウンセリング予約申し込み */
 .application {
   padding: 5.1282051282vw 5.1282051282vw 7.6923076923vw 5.1282051282vw;
+}
+@media screen and (min-width: 768px) {
+  .application {
+    padding: 1.9417475728vw 1.9417475728vw 2.9126213592vw 1.9417475728vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .application {
+    padding: 1.25rem 1.25rem 1.875rem 1.25rem;
+  }
+}
+.application__container {
+  max-width: 1030px;
+  margin-inline: auto;
 }
 .application__text {
   font-size: 5.3846153846vw;
@@ -188,6 +471,18 @@ li {
   text-align: center;
   font-weight: 600;
   margin-bottom: 3.3333333333vw;
+}
+@media screen and (min-width: 768px) {
+  .application__text {
+    font-size: 2.0388349515vw;
+    margin-bottom: 1.2621359223vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .application__text {
+    font-size: 1.3125rem;
+    margin-bottom: 0.8125rem;
+  }
 }
 .application__btn {
   font-size: 5.3846153846vw;
@@ -197,15 +492,54 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* ボタン全体に横幅を与えると「右端に寄る」が明確に */
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .application__btn {
+    font-size: 2.0388349515vw;
+    border-radius: 3.8834951456vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .application__btn {
+    font-size: 1.3125rem;
+    border-radius: 2.5rem;
+  }
 }
 .application__btn-text {
   width: 51.2820512821vw;
   margin: 0 12.8205128205vw;
 }
+@media screen and (min-width: 768px) {
+  .application__btn-text {
+    width: 19.4174757282vw;
+    margin: 0 4.854368932vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .application__btn-text {
+    width: 12.5rem;
+    margin: 0 3.125rem;
+  }
+}
 
+/* 無料体験内容 */
 .free-trial {
   padding: 0 5.1282051282vw 10.2564102564vw 5.1282051282vw;
+}
+@media screen and (min-width: 768px) {
+  .free-trial {
+    padding: 0 1.9417475728vw 3.8834951456vw 1.9417475728vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .free-trial {
+    padding: 0 1.25rem 2.5rem 1.25rem;
+  }
+}
+.free-trial__container {
+  max-width: 1030px;
+  margin-inline: auto;
 }
 .free-trial__text {
   font-size: 4.358974359vw;
@@ -216,19 +550,76 @@ li {
   border-top: 1px solid #50bfff;
   border-bottom: 1px solid #50bfff;
 }
+@media screen and (min-width: 768px) {
+  .free-trial__text {
+    font-size: 1.6504854369vw;
+    padding: 1.1650485437vw 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .free-trial__text {
+    font-size: 1.0625rem;
+    padding: 0.75rem 0;
+  }
+}
 .free-trial__hair-removal {
   margin-top: 3.8461538462vw;
+}
+@media screen and (min-width: 768px) {
+  .free-trial__hair-removal {
+    margin-top: 1.4563106796vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .free-trial__hair-removal {
+    margin-top: 0.9375rem;
+  }
 }
 .free-trial__course {
   font-size: 3.5897435897vw;
 }
+@media screen and (min-width: 768px) {
+  .free-trial__course {
+    font-size: 1.359223301vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .free-trial__course {
+    font-size: 0.875rem;
+  }
+}
 .free-trial__text--mini {
   font-size: 2.8205128205vw;
 }
+@media screen and (min-width: 768px) {
+  .free-trial__text--mini {
+    font-size: 1.067961165vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .free-trial__text--mini {
+    font-size: 0.6875rem;
+  }
+}
 
+/* KIRAMEKI BEAUTY LABOが選ばれる 3つのポイント */
 .select-points {
   background-color: #fdf0f5;
   padding: 10.5128205128vw 5.3846153846vw;
+}
+@media screen and (min-width: 768px) {
+  .select-points {
+    padding: 3.9805825243vw 2.0388349515vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points {
+    padding: 2.5625rem 1.3125rem;
+  }
+}
+.select-points__container {
+  max-width: 1030px;
+  margin-inline: auto;
 }
 .select-points__title {
   font-size: 4.6153846154vw;
@@ -236,14 +627,44 @@ li {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .select-points__title {
+    font-size: 1.7475728155vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__title {
+    font-size: 1.125rem;
+  }
+}
 .select-points__three-point {
-  font-size: 32px;
+  font-size: 8.2051282051vw;
   text-align: center;
   color: #fa7da3;
   font-weight: bold;
 }
+@media screen and (min-width: 768px) {
+  .select-points__three-point {
+    font-size: 3.1067961165vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__three-point {
+    font-size: 2rem;
+  }
+}
 .select-points__content {
   margin-top: 8.2051282051vw;
+}
+@media screen and (min-width: 768px) {
+  .select-points__content {
+    margin-top: 3.1067961165vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__content {
+    margin-top: 2rem;
+  }
 }
 .select-points__heading {
   background-color: #fa7da3;
@@ -254,6 +675,20 @@ li {
   border-radius: 2.5641025641vw 2.5641025641vw 0 0;
   border: 1px solid #fa7da3;
 }
+@media screen and (min-width: 768px) {
+  .select-points__heading {
+    font-size: 1.7475728155vw;
+    padding: 1.359223301vw 0;
+    border-radius: 0.9708737864vw 0.9708737864vw 0 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__heading {
+    font-size: 1.125rem;
+    padding: 0.875rem 0;
+    border-radius: 0.625rem 0.625rem 0 0;
+  }
+}
 .select-points__description {
   background-color: #fff;
   padding: 5.1282051282vw 5.3846153846vw;
@@ -261,11 +696,33 @@ li {
   border: 1px solid #fa7da3;
   border-radius: 0 0 2.5641025641vw 2.5641025641vw;
 }
+@media screen and (min-width: 768px) {
+  .select-points__description {
+    padding: 1.9417475728vw 2.0388349515vw;
+    border-radius: 0 0 0.9708737864vw 0.9708737864vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__description {
+    padding: 1.25rem 1.3125rem;
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+}
 .select-points__items {
   display: flex;
   align-items: center;
   margin-top: 2.5641025641vw;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .select-points__items {
+    margin-top: 0.9708737864vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__items {
+    margin-top: 0.625rem;
+  }
 }
 .select-points__text {
   text-align: left;
@@ -274,6 +731,16 @@ li {
   text-align: center;
   width: 36.6666666667vw;
 }
+@media screen and (min-width: 768px) {
+  .select-points__item {
+    width: 13.8834951456vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__item {
+    width: 8.9375rem;
+  }
+}
 .select-points__image {
   border: 1px solid #fa7da3;
   padding: 0 9.7435897436vw;
@@ -281,9 +748,33 @@ li {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .select-points__image {
+    padding: 0 3.6893203883vw;
+    height: 8.2524271845vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__image {
+    padding: 0 2.375rem;
+    height: 5.3125rem;
+  }
+}
 .select-points__menu {
   font-size: 3.5897435897vw;
   margin-top: 2.3076923077vw;
+}
+@media screen and (min-width: 768px) {
+  .select-points__menu {
+    font-size: 1.359223301vw;
+    margin-top: 0.8737864078vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__menu {
+    font-size: 0.875rem;
+    margin-top: 0.5625rem;
+  }
 }
 .select-points__store-name {
   height: 21.7948717949vw;
@@ -293,8 +784,32 @@ li {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .select-points__store-name {
+    height: 8.2524271845vw;
+    padding: 0 3.4951456311vw;
+    font-size: 1.7475728155vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__store-name {
+    height: 5.3125rem;
+    padding: 0 2.25rem;
+    font-size: 1.125rem;
+  }
+}
 .select-points__text {
   font-size: 3.5897435897vw;
+}
+@media screen and (min-width: 768px) {
+  .select-points__text {
+    font-size: 1.359223301vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__text {
+    font-size: 0.875rem;
+  }
 }
 .select-points__plan {
   display: flex;
@@ -302,50 +817,171 @@ li {
   justify-content: center;
   gap: 3.0769230769vw;
 }
+@media screen and (min-width: 768px) {
+  .select-points__plan {
+    gap: 1.1650485437vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__plan {
+    gap: 0.75rem;
+  }
+}
 .select-points__plan-item {
   width: 25.641025641vw;
   aspect-ratio: 1/1;
+}
+@media screen and (min-width: 768px) {
+  .select-points__plan-item {
+    width: 9.7087378641vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__plan-item {
+    width: 6.25rem;
+  }
 }
 .select-points__full-body-plan-text {
   font-size: 5.8974358974vw;
   font-weight: 600;
   margin-bottom: 7.1794871795vw;
 }
+@media screen and (min-width: 768px) {
+  .select-points__full-body-plan-text {
+    font-size: 2.2330097087vw;
+    margin-bottom: 2.7184466019vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__full-body-plan-text {
+    font-size: 1.4375rem;
+    margin-bottom: 1.75rem;
+  }
+}
 .select-points__text-point-two {
   font-size: 3.5897435897vw;
   margin-bottom: 4.6153846154vw;
+}
+@media screen and (min-width: 768px) {
+  .select-points__text-point-two {
+    font-size: 1.359223301vw;
+    margin-bottom: 1.7475728155vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__text-point-two {
+    font-size: 0.875rem;
+    margin-bottom: 1.125rem;
+  }
 }
 .select-points__partial-hair-removal-plan {
   font-size: 5.8974358974vw;
   font-weight: 600;
   margin: 14.8717948718vw 7.1794871795vw 7.1794871795vw;
 }
+@media screen and (min-width: 768px) {
+  .select-points__partial-hair-removal-plan {
+    font-size: 2.2330097087vw;
+    margin: 5.6310679612vw 2.7184466019vw 2.7184466019vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__partial-hair-removal-plan {
+    font-size: 1.4375rem;
+    margin: 3.625rem 1.75rem 1.75rem;
+  }
+}
 .select-points__point-two {
   padding: 5.1282051282vw 0;
+}
+@media screen and (min-width: 768px) {
+  .select-points__point-two {
+    padding: 1.9417475728vw 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__point-two {
+    padding: 1.25rem 0;
+  }
 }
 .select-points__plan-text {
   font-size: 3.5897435897vw;
   color: #fa7da3;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .select-points__plan-text {
+    font-size: 1.359223301vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__plan-text {
+    font-size: 0.875rem;
+  }
+}
 
+/* ほかにも選べる！2つのコース */
 .two-courses {
   padding: 0 5.3846153846vw;
 }
+@media screen and (min-width: 768px) {
+  .two-courses {
+    padding: 0 2.0388349515vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses {
+    padding: 0 1.3125rem;
+  }
+}
 .two-courses__container {
   text-align: center;
+  max-width: 1030px;
+  margin-inline: auto;
 }
 .two-courses__content {
   margin-bottom: 7.6923076923vw;
 }
+@media screen and (min-width: 768px) {
+  .two-courses__content {
+    margin-bottom: 2.9126213592vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__content {
+    margin-bottom: 1.875rem;
+  }
+}
 .two-courses__title {
   font-size: 4.6153846154vw;
+}
+@media screen and (min-width: 768px) {
+  .two-courses__title {
+    font-size: 1.7475728155vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__title {
+    font-size: 1.125rem;
+  }
 }
 .two-courses__two-course {
   font-size: 8.2051282051vw;
   font-weight: bold;
   color: #fa7da3;
   margin-bottom: 7.9487179487vw;
+}
+@media screen and (min-width: 768px) {
+  .two-courses__two-course {
+    font-size: 3.1067961165vw;
+    margin-bottom: 3.0097087379vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__two-course {
+    font-size: 2rem;
+    margin-bottom: 1.9375rem;
+  }
 }
 .two-courses__first {
   background-color: #fdf0f5;
@@ -356,15 +992,51 @@ li {
   border: 1px solid #fa7da3;
   border-bottom: none;
 }
+@media screen and (min-width: 768px) {
+  .two-courses__first {
+    padding: 1.4563106796vw 0;
+    border-radius: 0.9708737864vw 0.9708737864vw 0 0;
+    font-size: 1.7475728155vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__first {
+    padding: 0.9375rem 0;
+    border-radius: 0.625rem 0.625rem 0 0;
+    font-size: 1.125rem;
+  }
+}
 .two-courses__description {
   border: 1px solid #fa7da3;
   border-top: none;
   border-radius: 0 0 2.5641025641vw 2.5641025641vw;
   padding: 5.1282051282vw 5.3846153846vw;
 }
+@media screen and (min-width: 768px) {
+  .two-courses__description {
+    border-radius: 0 0 0.9708737864vw 0.9708737864vw;
+    padding: 1.9417475728vw 2.0388349515vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__description {
+    border-radius: 0 0 0.625rem 0.625rem;
+    padding: 1.25rem 1.3125rem;
+  }
+}
 .two-courses__text {
   text-align: left;
   margin-bottom: 5.1282051282vw;
+}
+@media screen and (min-width: 768px) {
+  .two-courses__text {
+    margin-bottom: 1.9417475728vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__text {
+    margin-bottom: 1.25rem;
+  }
 }
 .two-courses__second {
   background-color: #fdf0f5;
@@ -375,10 +1047,39 @@ li {
   border: 1px solid #fa7da3;
   border-bottom: none;
 }
+@media screen and (min-width: 768px) {
+  .two-courses__second {
+    border-radius: 0.9708737864vw 0.9708737864vw 0 0;
+    font-size: 1.7475728155vw;
+    padding: 1.4563106796vw 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__second {
+    border-radius: 0.625rem 0.625rem 0 0;
+    font-size: 1.125rem;
+    padding: 0.9375rem 0;
+  }
+}
 
+/* お客様の声 */
 .reviews {
   background-color: #fdf0f5;
   padding: 9.4871794872vw 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding: 3.5922330097vw 0 0 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews {
+    padding: 2.3125rem 0 0 0;
+  }
+}
+.reviews__container {
+  max-width: 1030px;
+  margin-inline: auto;
 }
 .reviews__title {
   font-size: 8.1769230769vw;
@@ -387,15 +1088,37 @@ li {
   text-align: center;
   margin: 0 0 6.6666666667vw 0;
 }
+@media screen and (min-width: 768px) {
+  .reviews__title {
+    font-size: 3.0961165049vw;
+    margin: 0 0 2.5242718447vw 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__title {
+    font-size: 1.993125rem;
+    margin: 0 0 1.625rem 0;
+  }
+}
 .reviews .is-active {
   display: block;
 }
 .reviews__items {
   overflow: visible;
 }
-.reviews .reviews__items .slick-slide {
-  padding: 0 7.5px;
+.reviews__items .slick-slide {
+  padding: 0 1.9230769231vw;
   box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .reviews__items .slick-slide {
+    padding: 0 0.7281553398vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__items .slick-slide {
+    padding: 0 0.46875rem;
+  }
 }
 .reviews__dots {
   margin-top: 4.1025641026vw;
@@ -405,10 +1128,10 @@ li {
 }
 @media screen and (min-width: 768px) {
   .reviews__dots {
-    margin-top: 1.3333333333vw;
+    margin-top: 1.5533980583vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1030px) {
   .reviews__dots {
     margin-top: 1rem;
   }
@@ -425,12 +1148,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .reviews__dot {
-    width: 0.75vw;
-    height: 0.75vw;
-    margin: 0 0.3333333333vw;
+    width: 0.8737864078vw;
+    height: 0.8737864078vw;
+    margin: 0 0.3883495146vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1030px) {
   .reviews__dot {
     width: 0.5625rem;
     height: 0.5625rem;
@@ -445,10 +1168,10 @@ li {
 }
 @media screen and (min-width: 768px) {
   .reviews .slick-track {
-    height: 32.3333333333vw;
+    height: 37.6699029126vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1030px) {
   .reviews .slick-track {
     height: 24.25rem;
   }
@@ -474,6 +1197,22 @@ li {
   border-radius: 2.5641025641vw 2.5641025641vw 0 0;
   border: 1px solid #fa7da3;
 }
+@media screen and (min-width: 768px) {
+  .reviews__menu {
+    font-size: 1.7475728155vw;
+    text-align: center;
+    padding: 1.359223301vw 0;
+    border-radius: 0.9708737864vw 0.9708737864vw 0 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__menu {
+    font-size: 1.125rem;
+    text-align: center;
+    padding: 0.875rem 0;
+    border-radius: 0.625rem 0.625rem 0 0;
+  }
+}
 .reviews__description {
   background-color: #fff;
   padding: 5.1282051282vw 0;
@@ -483,23 +1222,86 @@ li {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .reviews__description {
+    padding: 1.9417475728vw 0;
+    border-radius: 0 0 0.9708737864vw 0.9708737864vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__description {
+    padding: 1.25rem 0;
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+}
 .reviews__content {
   width: 45.641025641vw;
   text-align: left;
 }
+@media screen and (min-width: 768px) {
+  .reviews__content {
+    width: 17.2815533981vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__content {
+    width: 11.125rem;
+  }
+}
 .reviews__img {
   margin: 0 3.8461538462vw;
+}
+@media screen and (min-width: 768px) {
+  .reviews__img {
+    margin: 0 1.4563106796vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__img {
+    margin: 0 0.9375rem;
+  }
 }
 .reviews__reviewer-info {
   color: #fa7da3;
   font-size: 4.1025641026vw;
 }
+@media screen and (min-width: 768px) {
+  .reviews__reviewer-info {
+    font-size: 1.5533980583vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__reviewer-info {
+    font-size: 1rem;
+  }
+}
 .reviews__text {
   font-size: 3.5897435897vw;
 }
+@media screen and (min-width: 768px) {
+  .reviews__text {
+    font-size: 1.359223301vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__text {
+    font-size: 0.875rem;
+  }
+}
 
+/* フッター */
 .footer {
   background-color: #fa7da3;
   text-align: center;
   padding: 3.5897435897vw 0 2.8205128205vw 0;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 1.359223301vw 0 1.067961165vw 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .footer {
+    padding: 0.875rem 0 0.6875rem 0;
+  }
 }/*# sourceMappingURL=main.css.map */

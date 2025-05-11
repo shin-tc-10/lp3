@@ -5,7 +5,7 @@
 // カンプ / コンテンツ幅の指定
 $sp-full-width: 390;    // スマホ用のカンプ幅
 $pc-full-width: 1440;    // PC用のカンプ幅
-$pc-content-width: 1200; // PC用のカンプのコンテンツ幅(ガイド線の幅)
+$pc-content-width: 1030; // PC用のカンプのコンテンツ幅(ガイド線の幅)
 
 // ブレークポイント設定
 // スマホ: 
@@ -118,18 +118,35 @@ li {
     flex-direction: column;
 }
 
+/* ヘッダー */
 .header {
     &__container {
+        max-width: 1030px;
+        margin-inline: auto;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        padding: vw(10) vw(9) vw(10) vw(12)
+        @include mq() {
+            height: vwt(93);
+        }
+        @include mq(lg) {
+            height: px2Rem(93);
+        }
+    }
+    &__btns {
+        display: flex;
     }
     &__link {
         display: block;
     }
     &__arrow-image {
         margin-bottom: vw(4);
+        @include mq() {
+            margin-bottom: vwt(4);
+        }
+        @include mq(lg) {
+            margin-bottom: px2Rem(4);
+        }
     }
 }
 
@@ -139,36 +156,76 @@ li {
     line-height: 1.75;
     padding: vw(9) vw(9) vw(10) vw(11);
     display: block;
+    @include mq() {
+        padding: vwt(6) vwt(26);
+        border-radius: vwt(25.18);
+        font-size: vwt(21.2);
+    }
+    @include mq(lg) {
+        padding: px2Rem(6) px2Rem(26);
+        border-radius: px2Rem(25.18);
+        font-size: px2Rem(21.2);
+    }
 }
 .btn--pink {
     background-color: #fa7da3;
+    margin-right: vwt(10);
 }
 .btn--green {
     background-color: #49c43d;
+    padding: px2Rem(6) px2Rem(18);
 }
 
+/* メインビジュアル */
 .cover {
     background-color: #fa7da3;
     background-image: url('/assets/image/main_visual_sp.png');
     background-position: bottom left;
     background-size: 55%;
     height: vw(319);
+    @include mq() {
+        height: vwt(612);
+        background-image: url('/assets/image/main_visual_pc.png');
+        background-size: 33%;
+        background-position: calc(19% + 20px) bottom;
+    }
+
+    @include mq(lg) {
+        height: px2Rem(612);
+    }
     &__title {
         font-size: vw(42);
         margin: vw(20) 0 0 vw(16);
+        @include mq() {
+            margin: 0 0 0 vwt(16);
+            line-height: 1;
+        }
+        @include mq(lg) {
+            margin: 0 0 0 px2Rem(16);
+        }
     }
-
     &__container {
         display: flex;
         justify-content: space-between;
+        max-width: 1030px;
+        margin-inline: auto;
+        @include mq() {
+            justify-content: space-evenly;
+        }
     }
-
     &__items {
         display: flex;
         align-items: center;
         background-color: #fca4bf;
-        padding: vw(24) vw(23) vw(24) vw(26);
         box-shadow: 4px 4px #e77497;
+        @include mq() {
+            padding: vwt(24) vwt(60);
+            margin-right: vwt(10);
+        }
+        @include mq(lg) {
+            padding: px2Rem(24) px2Rem(60);
+            margin-right: px2Rem(20);
+        }
     }
 
     &__text--font-color-pink {
@@ -178,29 +235,81 @@ li {
         font-weight: bold;
         padding: vw(5) vw(3) vw(6) vw(4);
         margin-right: vw(15);
+        @include mq() {
+            padding: vwt(12) vwt(8) vwt(12) vwt(10);
+            margin-right: vwt(15);
+            font-size: vwt(29.25);
+        }
+        @include mq(lg) {
+            padding: px2Rem(12) px2Rem(8) px2Rem(12) px2Rem(10);
+            margin-right: px2Rem(15);
+            font-size: px2Rem(29.25);
+        }
     }
     &__text--font-color-white {
         color: #FFF;
         font-size: vw(24);
         font-weight: bold;
+        @include mq() {
+            font-size: vwt(54);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(54);
+        }
     }
     &__price {
         font-size: vw(76);
         font-weight: bold;
         color: #fffd7a;
         line-height: 0.76;
+        @include mq() {
+            font-size: vwt(171);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(171);
+        }
     }
     &__price--font-small {
         font-size: vw(36);
+        @include mq() {
+            font-size: vwt(81);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(81);
+        }
     }
 
     &__price-month {
         color: #FFF;
         text-align: right;
         padding-right: vw(28);
+        @include mq() {
+            padding-right: vwt(26.48);
+            font-size: vwt(26.48);
+            margin-right: vwt(60);
+        }
+        @include mq(lg) {
+            padding-right: px2Rem(26.48);
+            font-size: px2Rem(26.48);
+            margin-right: px2Rem(60);
+        }
+    }
+    &__price-month---small {
+        @include mq() {
+            font-size: vwt(17.02);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(17.02);
+        }
     }
     &__points {
         margin:vw(25) vw(26) 0 vw(26);
+        @include mq() {
+            margin:vwt(43) vwt(20) 0 0;
+        }
+        @include mq(lg) {
+            margin:px2Rem(43) px2Rem(20) 0 0;
+        }
     }
     &__point {
         border: 1px solid #FFF;
@@ -208,14 +317,30 @@ li {
         margin-bottom: vw(12);
         color: #FFF;
         font-size: vw(18);
+        @include mq() {
+            margin-bottom: vw(20);
+            font-size: vwt(28);
+            line-height: 2.4;
+        }
+        @include mq(lg) {
+            margin-bottom: px2Rem(20);
+            font-size: px2Rem(28);
+        }
     }
 }
 
+/* 今だけプレゼント */
 .present {
     background-color: #fffedd;
     padding: vw(25) vw(21) vw(16) vw(21);
+    @include mq() {
+        padding: vwt(33) vwt(21) vwt(16) vwt(21);
+    }
+    @include mq(lg) {
+        padding: px2Rem(33) px2Rem(21) px2Rem(16) px2Rem(21);
+    }
     &__container {
-        max-width: 1200px;
+        max-width: 550px;
         margin-inline: auto;
     }
     &__text {
@@ -225,6 +350,14 @@ li {
         position: relative;
         text-align: center;
         margin-bottom: vw(16);
+        @include mq() {
+            font-size: vwt(34);
+            margin-bottom: vwt(16);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(34);
+            margin-bottom: px2Rem(16);
+        }
     }
     &__text::before,
     &__text::after {
@@ -232,14 +365,26 @@ li {
         display: inline-block;
         content: "";
         background: #fa7da3;
-        width: 2px;
+        width: vw(2);
         height: 1em;
         margin-top: -.2em;
         vertical-align: middle;
+        @include mq() {
+            width: vwt(2);
+        }
+        @include mq(lg) {
+            width: px2Rem(2);
+        }
     }
     &__text::before {
         transform: rotate(-35deg);
         margin-right: vw(10);
+        @include mq() {
+            margin-right: vwt(10);
+        }
+        @include mq(lg) {
+            margin-right: px2Rem(10);
+        }
     }
     &__text::after {
         transform: rotate(35deg);
@@ -255,6 +400,16 @@ li {
         border: 1px solid #fa7da3;
         padding: vw(7) 0;
         font-size: vw(21);
+        @include mq() {
+            border-radius: vwt(10) vwt(10) 0 0;
+            padding: vwt(7) 0;
+            font-size: vwt(21);
+        }
+        @include mq(lg) {
+            border-radius: px2Rem(10) px2Rem(10) 0 0;
+            padding: px2Rem(7) 0;
+            font-size: px2Rem(21);
+        }
     }
     &__text--background-white {
         background-color: #FFF;
@@ -263,31 +418,69 @@ li {
         padding: vw(14) 0;
         font-size: vw(27);
         color: #fa7da3;
+        @include mq() {
+            border-radius: 0 0 vwt(10) vwt(10);
+            padding: vwt(14) 0;
+            font-size: vwt(27);
+        }
+        @include mq(lg) {
+            border-radius: 0 0 px2Rem(10) px2Rem(10);
+            padding: px2Rem(14) 0;
+            font-size: px2Rem(27);
+        }
     }
     &__text-three {
         font-size: vw(42);
         font-weight: 600;
+        @include mq() {
+            font-size: vwt(42);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(42);
+        }
     }
     &__description {
         font-size: vw(10);
         text-align: center;
         margin-top: vw(10);
+        @include mq() {
+            font-size: vwt(10);
+            margin-top: vwt(10);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(10);
+            margin-top: px2Rem(10);
+        }
     }
 }
 
+/* カウンセリング予約申し込み */
 .application {
     padding: vw(20) vw(20) vw(30) vw(20);
-
-    &__container {
-
+    @include mq() {
+        padding: vwt(20) vwt(20) vwt(30) vwt(20);
     }
-
+    @include mq(lg) {
+        padding: px2Rem(20) px2Rem(20) px2Rem(30) px2Rem(20);
+    }
+    &__container {
+        max-width: 1030px;
+        margin-inline: auto;
+    }
     &__text {
         font-size: vw(21);
         color: #fa7da3;
         text-align: center;
         font-weight: 600;
         margin-bottom: vw(13);
+        @include mq() {
+            font-size: vwt(21);
+            margin-bottom: vwt(13);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(21);
+            margin-bottom: px2Rem(13);
+        }
     }
     &__btn {
         font-size: vw(21);
@@ -297,17 +490,44 @@ li {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%; /* ボタン全体に横幅を与えると「右端に寄る」が明確に */
+        width: 100%;
+        @include mq() {
+            font-size: vwt(21);
+            border-radius: vwt(40);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(21);
+            border-radius: px2Rem(40);
+        }
     }
 
     &__btn-text {
         width: vw(200);
-        margin: 0 vw(50)
+        margin: 0 vw(50);
+        @include mq() {
+            width: vwt(200);
+            margin: 0 vwt(50);
+        }
+        @include mq(lg) {
+            width: px2Rem(200);
+            margin: 0 px2Rem(50);
+        }
     }
 }
 
+/* 無料体験内容 */
 .free-trial {
     padding: 0 vw(20) vw(40) vw(20);
+    @include mq() {
+        padding: 0 vwt(20) vwt(40) vwt(20);
+    }
+    @include mq(lg) {
+        padding: 0 px2Rem(20) px2Rem(40) px2Rem(20);
+    }
+    &__container {
+        max-width: 1030px;
+        margin-inline: auto;
+    }
     &__text {
         font-size: vw(17);
         text-align: center;
@@ -316,35 +536,90 @@ li {
         color: #50bfff;
         border-top: 1px solid #50bfff;
         border-bottom: 1px solid #50bfff;
+        @include mq() {
+            font-size: vwt(17);
+            padding: vwt(12) 0;
+        }
+        @include mq(lg) {
+            font-size: px2Rem(17);
+            padding: px2Rem(12) 0;
+        }
     }
     &__hair-removal {
         margin-top: vw(15);
+        @include mq() {
+            margin-top: vwt(15);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(15);
+        }
     }
     &__course {
         font-size: vw(14);
+        @include mq() {
+            font-size: vwt(14);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(14);
+        }
     }
     &__text--mini {
         font-size: vw(11);
+        @include mq() {
+            font-size: vwt(11);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(11);
+        }
     }
 }
 
+/* KIRAMEKI BEAUTY LABOが選ばれる 3つのポイント */
 .select-points {
     background-color: #fdf0f5;
     padding: vw(41) vw(21);
+    @include mq() {
+        padding: vwt(41) vwt(21);
+    }
+    @include mq(lg) {
+        padding: px2Rem(41) px2Rem(21);
+    }
+    &__container {
+        max-width: 1030px;
+        margin-inline: auto;
+    }
     &__title {
         font-size: vw(18);
         align-items: center;
         display: flex;
         justify-content: center;
+        @include mq() {
+            font-size: vwt(18);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(18);
+        }
     }
     &__three-point {
-        font-size: 32px;
+        font-size: vw(32);
         text-align: center;
         color: #fa7da3;
         font-weight: bold;
+        @include mq() {
+            font-size: vwt(32);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(32);
+        }
     }
     &__content {
         margin-top: vw(32);
+        @include mq() {
+            margin-top: vwt(32);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(32);
+        }
     }
     &__heading {
         background-color: #fa7da3;
@@ -354,7 +629,16 @@ li {
         padding: vw(14) 0;
         border-radius: vw(10) vw(10) 0 0;
         border: 1px solid #fa7da3;
-
+        @include mq() {
+            font-size: vwt(18);
+            padding: vwt(14) 0;
+            border-radius: vwt(10) vwt(10) 0 0;
+        }
+        @include mq(lg) {
+            font-size: px2Rem(18);
+            padding: px2Rem(14) 0;
+            border-radius: px2Rem(10) px2Rem(10) 0 0;
+        }
     }
     &__description {
         background-color: #fff;
@@ -362,12 +646,26 @@ li {
         text-align: center;
         border: 1px solid #fa7da3;
         border-radius: 0 0 vw(10) vw(10);
+        @include mq() {
+            padding: vwt(20) vwt(21);
+            border-radius: 0 0 vwt(10) vwt(10);
+        }
+        @include mq(lg) {
+            padding: px2Rem(20) px2Rem(21);
+            border-radius: 0 0 px2Rem(10) px2Rem(10);
+        }
     }
     &__items {
         display: flex;
         align-items: center;
         margin-top: vw(10);
         justify-content: space-between;
+        @include mq() {
+            margin-top: vwt(10);
+        }
+        @include mq(lg) {
+            margin-top: px2Rem(10);
+        }
     }
     &__text {
         text-align: left;
@@ -375,6 +673,12 @@ li {
     &__item {
         text-align: center;
         width: vw(143);
+        @include mq() {
+            width: vwt(143);
+        }
+        @include mq(lg) {
+            width: px2Rem(143);
+        }
     }
     &__image {
         border: 1px solid #fa7da3;
@@ -382,10 +686,26 @@ li {
         height: vw(85);
         display: flex;
         align-items: center;
+        @include mq() {
+            padding: 0 vwt(38);
+            height: vwt(85);
+        }
+        @include mq(lg) {
+            padding: 0 px2Rem(38);
+            height: px2Rem(85);
+        }
     }
     &__menu {
         font-size: vw(14);
         margin-top: vw(9);
+        @include mq() {
+            font-size: vwt(14);
+            margin-top: vwt(9);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(14);
+            margin-top: px2Rem(9);
+        }
     }
     &__store-name {
         height: vw(85);
@@ -394,60 +714,153 @@ li {
         border: 1px solid #666666;
         display: flex;
         align-items: center;
+        @include mq() {
+            height: vwt(85);
+            padding: 0 vwt(36);
+            font-size: vwt(18);
+        }
+        @include mq(lg) {
+            height: px2Rem(85);
+            padding: 0 px2Rem(36);
+            font-size: px2Rem(18);
+        }
     }
     &__text {
         font-size: vw(14);
+        @include mq() {
+            font-size: vwt(14);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(14);
+        }
     }
     &__plan {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: vw(12);
+        @include mq() {
+            gap: vwt(12);
+        }
+        @include mq(lg) {
+            gap: px2Rem(12);
+        }
     }
     &__plan-item {
         width: vw(100);
         aspect-ratio: 1 / 1;
+        @include mq() {
+            width: vwt(100);
+        }
+        @include mq(lg) {
+            width: px2Rem(100);
+        }
     }
     &__full-body-plan-text {
         font-size: vw(23);
         font-weight: 600;
         margin-bottom: vw(28);
+        @include mq() {
+            font-size: vwt(23);
+            margin-bottom: vwt(28);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(23);
+            margin-bottom: px2Rem(28);
+        }
     }
     &__text-point-two {
         font-size: vw(14);
         margin-bottom: vw(18);
+        @include mq() {
+            font-size: vwt(14);
+            margin-bottom: vwt(18);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(14);
+            margin-bottom: px2Rem(18);
+        }
     }
     &__partial-hair-removal-plan {
         font-size: vw(23);
         font-weight: 600;
         margin: vw(58) vw(28) vw(28);
+        @include mq() {
+            font-size: vwt(23);
+            margin: vwt(58) vwt(28) vwt(28);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(23);
+            margin: px2Rem(58) px2Rem(28) px2Rem(28);
+        }
     }
     &__point-two {
         padding: vw(20) 0;
+        @include mq() {
+            padding: vwt(20) 0;
+        }
+        @include mq(lg) {
+            padding: px2Rem(20) 0;
+        }
     }
     &__plan-text {
         font-size: vw(14);
         color: #fa7da3;
         font-weight: 600;
+        @include mq() {
+            font-size: vwt(14);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(14);
+        }
     }
 }
 
+/* ほかにも選べる！2つのコース */
 .two-courses {
     padding: 0 vw(21);
+    @include mq() {
+        padding: 0 vwt(21);
+    }
+    @include mq(lg) {
+        padding: 0 px2Rem(21);
+    }
     &__container {
         text-align: center;
+        max-width: 1030px;
+        margin-inline: auto;
     }
     &__content {
         margin-bottom: vw(30);
+        @include mq() {
+            margin-bottom: vwt(30);
+        }
+        @include mq(lg) {
+            margin-bottom: px2Rem(30);
+        }
     }
     &__title {
         font-size: vw(18);
+        @include mq() {
+            font-size: vwt(18);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(18);
+        }
     }
     &__two-course {
         font-size: vw(32);
         font-weight: bold;
         color: #fa7da3;
         margin-bottom: vw(31);
+        @include mq() {
+            font-size: vwt(32);
+            margin-bottom: vwt(31);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(32);
+            margin-bottom: px2Rem(31);
+        }
     }
     &__first {
         background-color: #fdf0f5;
@@ -457,16 +870,40 @@ li {
         padding: vw(15) 0;
         border: 1px solid #fa7da3;
         border-bottom: none;
+        @include mq() {
+            padding: vwt(15) 0;
+            border-radius: vwt(10) vwt(10) 0 0;
+            font-size: vwt(18);
+        }
+        @include mq(lg) {
+            padding: px2Rem(15) 0;
+            border-radius: px2Rem(10) px2Rem(10) 0 0;
+            font-size: px2Rem(18);
+        }
     }
     &__description {
         border: 1px solid #fa7da3;
         border-top: none;
         border-radius: 0 0 vw(10) vw(10);
         padding: vw(20) vw(21);
+        @include mq() {
+            border-radius: 0 0 vwt(10) vwt(10);
+            padding: vwt(20) vwt(21);
+        }
+        @include mq(lg) {
+            border-radius: 0 0 px2Rem(10) px2Rem(10);
+            padding: px2Rem(20) px2Rem(21);
+        }
     }
     &__text {
         text-align: left;
         margin-bottom: vw(20);
+        @include mq() {
+            margin-bottom: vwt(20);
+        }
+        @include mq(lg) {
+            margin-bottom: px2Rem(20);
+        }
     }
     &__second {
         background-color: #fdf0f5;
@@ -476,33 +913,64 @@ li {
         padding: vw(15) 0;
         border: 1px solid #fa7da3;
         border-bottom: none;
+        @include mq() {
+            border-radius: vwt(10) vwt(10) 0 0;
+            font-size: vwt(18);
+            padding: vwt(15) 0;
+        }
+        @include mq(lg) {
+            border-radius: px2Rem(10) px2Rem(10) 0 0;
+            font-size: px2Rem(18);
+            padding: px2Rem(15) 0;
+        }
     }
 }
 
+/* お客様の声 */
 .reviews {
     background-color: #fdf0f5;
     padding: vw(37) 0 0 0;
+    @include mq() {
+        padding: vwt(37) 0 0 0;
+    }
+    @include mq(lg) {
+        padding: px2Rem(37) 0 0 0;
+    }
+    &__container {
+        max-width: 1030px;
+        margin-inline: auto;
+    }
     &__title {
         font-size: vw(31.89);
         font-weight: bold;
         color: #fa7da3;
         text-align: center;
         margin: 0 0 vw(26) 0;
+        @include mq() {
+            font-size: vwt(31.89);
+            margin: 0 0 vwt(26) 0;
+        }
+        @include mq(lg) {
+            font-size: px2Rem(31.89);
+            margin: 0 0 px2Rem(26) 0;
+        }
     }
     .is-active {
         display: block;
     }
     &__items {
-        overflow: visible; // ←左右はみ出しを見せるため
+        overflow: visible;
     }
-
-    // &__item {
-    //     margin-right: vw(15);
-    // }
-    .reviews__items .slick-slide {
-        padding: 0 7.5px; // 両側で合計15px
+    &__items .slick-slide {
+        padding: 0 vw(7.5);
         box-sizing: border-box;
-      }
+        @include mq() {
+            padding: 0 vwt(7.5);
+        }
+        @include mq(lg) {
+            padding: 0 px2Rem(7.5);
+        }
+    }
     
     &__dots {
         margin-top: vw(16);
@@ -572,6 +1040,18 @@ li {
         padding: vw(14) 0;
         border-radius: vw(10) vw(10) 0 0;
         border: 1px solid #fa7da3;
+        @include mq() {
+            font-size: vwt(18);
+            text-align: center;
+            padding: vwt(14) 0;
+            border-radius: vwt(10) vwt(10) 0 0;
+        }
+        @include mq(lg) {
+            font-size: px2Rem(18);
+            text-align: center;
+            padding: px2Rem(14) 0;
+            border-radius: px2Rem(10) px2Rem(10) 0 0;
+        }
     }
     &__description {
         background-color: #fff;
@@ -581,26 +1061,64 @@ li {
         border-radius: 0 0 vw(10) vw(10);
         display: flex;
         justify-content: space-between;
+        @include mq() {
+            padding: vwt(20) 0;
+            border-radius: 0 0 vwt(10) vwt(10);
+        }
+        @include mq(lg) {
+            padding: px2Rem(20) 0;
+            border-radius: 0 0 px2Rem(10) px2Rem(10);
+        }
     }
     &__content {
         width: vw(178);
         text-align: left;
+        @include mq() {
+            width: vwt(178);
+        }
+        @include mq(lg) {
+            width: px2Rem(178);
+        }
     }
     &__img {
         margin: 0 vw(15);
+        @include mq() {
+            margin: 0 vwt(15);
+        }
+        @include mq(lg) {
+            margin: 0 px2Rem(15);
+        }
     }
     &__reviewer-info {
         color: #fa7da3;
         font-size: vw(16);
+        @include mq() {
+            font-size: vwt(16);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(16);
+        }
     }
     &__text {
         font-size: vw(14);
+        @include mq() {
+            font-size: vwt(14);
+        }
+        @include mq(lg) {
+            font-size: px2Rem(14);
+        }
     }
 }
 
-
+/* フッター */
 .footer {
     background-color: #fa7da3;
     text-align: center;
     padding: vw(14) 0 vw(11) 0;
+    @include mq() {
+        padding: vwt(14) 0 vwt(11) 0;
+    }
+    @include mq(lg) {
+        padding: px2Rem(14) 0 px2Rem(11) 0;
+    }
 }

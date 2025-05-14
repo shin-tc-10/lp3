@@ -35,10 +35,11 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 2.5641025641vw;
+  padding-left: 2.7948717949vw;
 }
 @media screen and (min-width: 768px) {
   .header__container {
-    padding: 1.8446601942vw 0;
+    padding: 1.8446601942vw 1.4563106796vw;
   }
 }
 @media screen and (min-width: 1030px) {
@@ -74,7 +75,7 @@ li {
   height: 2.5641025641vw;
   position: absolute;
   top: 35%;
-  right: 6%;
+  right: 7.5%;
 }
 @media screen and (min-width: 768px) {
   .header__arrow-image {
@@ -122,6 +123,7 @@ li {
 .btn--pink {
   background-color: #fa7da3;
   margin-right: 2.5641025641vw;
+  padding: 0.28125rem 1.49rem 0.39375rem 0.675rem;
 }
 @media screen and (min-width: 768px) {
   .btn--pink {
@@ -138,10 +140,13 @@ li {
 
 .btn--green {
   background-color: #49c43d;
+  padding: 1.2384615385vw 4.8487179487vw 1.5384615385vw 2.9743589744vw;
+  letter-spacing: 0.1538461538vw;
 }
 @media screen and (min-width: 768px) {
   .btn--green {
     padding: 0.5825242718vw 3.8834951456vw 0.5825242718vw 1.9417475728vw;
+    letter-spacing: 0;
   }
 }
 @media screen and (min-width: 1030px) {
@@ -209,7 +214,7 @@ li {
   .cover__container {
     justify-content: space-evenly;
     background-image: url("/assets/image/main_visual_pc.png");
-    background-size: min(34vw, 480px);
+    background-size: min(47vw, 480px);
     background-position: left bottom;
     height: 59.4174757282vw;
   }
@@ -217,6 +222,7 @@ li {
 @media screen and (min-width: 1030px) {
   .cover__container {
     height: 38.25rem;
+    background-size: min(34vw, 480px);
   }
 }
 .cover__image {
@@ -244,14 +250,14 @@ li {
 }
 @media screen and (min-width: 768px) {
   .cover__items {
-    padding: 3.786407767vw 4.3689320388vw;
-    margin-right: 0.9708737864vw;
+    padding: 4.2330097087vw 5.4368932039vw 2.9514563107vw;
+    margin-right: 1.7087378641vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .cover__items {
-    padding: 2.4375rem 2.8125rem;
-    margin-right: 1.25rem;
+    padding: 2.725rem 3.5rem 1.9rem;
+    margin-right: 1.1rem;
   }
 }
 .cover__text--font-color-pink {
@@ -266,12 +272,14 @@ li {
   .cover__text--font-color-pink {
     padding: 0 0.7766990291vw;
     font-size: 2.8398058252vw;
+    margin-right: 2.4757281553vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .cover__text--font-color-pink {
     padding: 0 0.5rem;
     font-size: 1.828125rem;
+    margin-right: 1.59375rem;
   }
 }
 .cover__text--font-color-white {
@@ -329,14 +337,14 @@ li {
   .cover__price-month {
     padding-right: 2.5708737864vw;
     font-size: 2.5708737864vw;
-    margin: 0 5.8252427184vw 0 0;
+    margin: 0 5.5145631068vw 0 0;
   }
 }
 @media screen and (min-width: 1030px) {
   .cover__price-month {
     padding-right: 1.655rem;
     font-size: 1.655rem;
-    margin: 0 3.75rem 0 0;
+    margin: 0 3.55rem 0 0;
   }
 }
 .cover__price-month---small {
@@ -514,13 +522,14 @@ li {
   .present__text--background-white {
     border-radius: 0 0 0.9708737864vw 0.9708737864vw;
     font-size: 4.2398058252vw;
-    padding: 0;
+    padding: 0 0 0.6310679612vw 1.9611650485vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .present__text--background-white {
     border-radius: 0 0 0.625rem 0.625rem;
     font-size: 2.729375rem;
+    padding: 0 0 0.40625rem 1.2625rem;
   }
 }
 .present__text-three {
@@ -545,13 +554,13 @@ li {
 @media screen and (min-width: 768px) {
   .present__description {
     font-size: 1.359223301vw;
-    margin-top: 0.9708737864vw;
+    margin-top: 1.1650485437vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .present__description {
     font-size: 0.875rem;
-    margin-top: 0.625rem;
+    margin-top: 0.75rem;
   }
 }
 
@@ -580,6 +589,7 @@ li {
 @media screen and (min-width: 1030px) {
   .application--last {
     padding-bottom: 3.75rem;
+    padding: 3.3125rem 1.25rem 4rem 1.25rem;
   }
 }
 .application__container {
@@ -624,14 +634,14 @@ li {
   .application__btn {
     font-size: 2.0388349515vw;
     border-radius: 6.3145631068vw;
-    padding: 2.427184466vw 1.1650485437vw;
+    padding: 2.1359223301vw 1.1650485437vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .application__btn {
     font-size: 1.3125rem;
     border-radius: 4.065rem;
-    padding: 1.5625rem 0.75rem;
+    padding: 1.375rem 0.75rem;
   }
 }
 .application__btn-text {
@@ -640,13 +650,13 @@ li {
 @media screen and (min-width: 768px) {
   .application__btn-text {
     font-size: 3.3009708738vw;
-    letter-spacing: 0.2038834951vw;
+    letter-spacing: 0.3883495146vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .application__btn-text {
     font-size: 2.125rem;
-    letter-spacing: 0.13125rem;
+    letter-spacing: 0.25rem;
   }
 }
 .application__image-arrow {
@@ -675,12 +685,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .free-trial {
-    padding: 1.7475728155vw 1.9417475728vw 4.854368932vw 1.9417475728vw;
+    padding: 1.7475728155vw 1.9417475728vw 5.145631068vw 1.9417475728vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .free-trial {
-    padding: 1.125rem 1.25rem 3.125rem 1.25rem;
+    padding: 1.125rem 1.25rem 3.3125rem 1.25rem;
   }
 }
 .free-trial__container {
@@ -789,13 +799,13 @@ li {
   .select-points__title {
     font-size: 1.754368932vw;
     line-height: 1;
-    margin-bottom: 1.6019417476vw;
+    margin-bottom: 1.1359223301vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__title {
     font-size: 1.129375rem;
-    margin-bottom: 1.03125rem;
+    margin-bottom: 0.73125rem;
   }
 }
 .select-points__title-text {
@@ -803,7 +813,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .select-points__title-text {
-    padding: 0;
+    padding: 0 0 0 0.4854368932vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__title-text {
+    padding: 0 0 0 0.3125rem;
   }
 }
 .select-points__three-point {
@@ -846,12 +861,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .select-points__content--second {
-    margin-top: 4.4368932039vw;
+    margin-top: 4.7572815534vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__content--second {
-    margin-top: 2.85625rem;
+    margin-top: 3.0625rem;
   }
 }
 .select-points__content--third {
@@ -859,12 +874,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .select-points__content--third {
-    margin-top: 4.4368932039vw;
+    margin-top: 4.854368932vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__content--third {
-    margin-top: 2.85625rem;
+    margin-top: 3.125rem;
   }
 }
 .select-points__heading {
@@ -875,6 +890,7 @@ li {
   padding: 1.4871794872vw 0;
   border-radius: 2.5641025641vw 2.5641025641vw 0 0;
   border: 1px solid #fa7da3;
+  font-weight: normal;
 }
 @media screen and (min-width: 768px) {
   .select-points__heading {
@@ -888,6 +904,16 @@ li {
     font-size: 1.75rem;
     padding: 0.78125rem 0;
     border-radius: 0.625rem 0.625rem 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .select-points__heading--third {
+    padding: 1.067961165vw 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__heading--third {
+    padding: 0.6875rem 0;
   }
 }
 .select-points__description {
@@ -915,12 +941,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .select-points__description-point3 {
-    padding: 2.2330097087vw 4.1262135922vw;
+    padding: 2.5242718447vw 4.1262135922vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__description-point3 {
-    padding: 1.4375rem 2.65625rem;
+    padding: 1.625rem 2.65625rem;
   }
 }
 .select-points__text {
@@ -932,6 +958,7 @@ li {
 @media screen and (min-width: 768px) {
   .select-points__text {
     font-size: 2.0388349515vw;
+    letter-spacing: 0;
   }
 }
 @media screen and (min-width: 1030px) {
@@ -963,15 +990,15 @@ li {
 }
 @media screen and (min-width: 768px) {
   .select-points__items {
-    margin-top: 2.0388349515vw;
-    padding: 0 5.0485436893vw;
+    margin-top: 2.3300970874vw;
+    padding: 0 5.3398058252vw;
     justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__items {
-    margin-top: 1.3125rem;
-    padding: 0 3.25rem;
+    margin-top: 1.5rem;
+    padding: 0 3.4375rem;
   }
 }
 .select-points__item {
@@ -990,8 +1017,8 @@ li {
   }
 }
 .select-points__image {
-  border: 1px solid #fa7da3;
-  padding: 5.8974358974vw 9.7435897436vw;
+  border: 2px solid #fa7da3;
+  padding: 5.5974358974vw 8.1435897436vw 5.5974358974vw 9.4435897436vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1012,32 +1039,32 @@ li {
 @media screen and (min-width: 768px) {
   .select-points__menu {
     font-size: 2.0388349515vw;
-    margin-top: 0.8737864078vw;
+    margin-top: 0.5631067961vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__menu {
     font-size: 1.3125rem;
-    margin-top: 0.5625rem;
+    margin-top: 0.3625rem;
   }
 }
 .select-points__store-name {
   padding: 6.6666666667vw 9.2307692308vw;
   font-size: 4.6153846154vw;
-  border: 1px solid #666666;
+  border: 2px solid #666666;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .select-points__store-name {
-    padding: 3.9805825243vw 3.4951456311vw;
+    padding: 4.0776699029vw 3.4951456311vw;
     font-size: 2.8184466019vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__store-name {
-    padding: 2.5625rem 2.25rem;
+    padding: 2.625rem 2.25rem;
     font-size: 1.814375rem;
   }
 }
@@ -1146,13 +1173,15 @@ li {
 @media screen and (min-width: 768px) {
   .select-points__image-full-body {
     width: 54.1747572816vw;
-    height: 62.9126213592vw;
+    height: 58.3495145631vw;
+    margin-left: 2.9126213592vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__image-full-body {
     width: 34.875rem;
-    height: 40.5rem;
+    height: 37.5625rem;
+    margin-left: 1.875rem;
   }
 }
 .select-points__image-plan {
@@ -1183,6 +1212,7 @@ li {
     font-size: 2.0388349515vw;
     margin-bottom: 1.7475728155vw;
     padding: 0 4.0776699029vw;
+    line-height: 1.6;
   }
 }
 @media screen and (min-width: 1030px) {
@@ -1199,14 +1229,14 @@ li {
 }
 @media screen and (min-width: 768px) {
   .select-points__partial-hair-removal-plan {
-    font-size: 2.2330097087vw;
-    margin: 5.0485436893vw 2.7184466019vw 2.7184466019vw;
+    font-size: 2.3300970874vw;
+    margin: 5.0485436893vw 2.7184466019vw 2.2330097087vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__partial-hair-removal-plan {
-    font-size: 1.4375rem;
-    margin: 3.25rem 1.75rem 1.75rem;
+    font-size: 1.5rem;
+    margin: 3.25rem 1.75rem 1.4375rem;
   }
 }
 .select-points__point-two {
@@ -1214,12 +1244,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .select-points__point-two {
-    padding: 2.2330097087vw 0 2.6213592233vw 0;
+    padding: 2.2330097087vw 0 2.8155339806vw 0;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__point-two {
-    padding: 1.4375rem 0 1.6875rem 0;
+    padding: 1.4375rem 0 1.8125rem 0;
   }
 }
 .select-points__plan-text {
@@ -1230,11 +1260,25 @@ li {
 @media screen and (min-width: 768px) {
   .select-points__plan-text {
     font-size: 1.359223301vw;
+    line-height: 2;
   }
 }
 @media screen and (min-width: 1030px) {
   .select-points__plan-text {
     font-size: 0.875rem;
+  }
+}
+.select-points__text-three {
+  letter-spacing: 0.2820512821vw;
+}
+@media screen and (min-width: 768px) {
+  .select-points__text-three {
+    letter-spacing: 0;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .select-points__text-three {
+    letter-spacing: 0;
   }
 }
 
@@ -1244,18 +1288,31 @@ li {
 }
 @media screen and (min-width: 768px) {
   .two-courses {
-    padding: 1.9417475728vw 2.0388349515vw 2.9126213592vw 2.0388349515vw;
+    padding: 1.7475728155vw 2.0388349515vw 2.9126213592vw 2.0388349515vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .two-courses {
-    padding: 1.25rem 1.3125rem 1.875rem 1.3125rem;
+    padding: 1.125rem 1.3125rem 1.875rem 1.3125rem;
   }
 }
 .two-courses__container {
   text-align: center;
   max-width: 731px;
   margin-inline: auto;
+}
+.two-courses__image-star {
+  margin-bottom: 0.6923076923vw;
+}
+@media screen and (min-width: 768px) {
+  .two-courses__image-star {
+    margin-bottom: 0.572815534vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .two-courses__image-star {
+    margin-bottom: 0.36875rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .two-courses__items {
@@ -1270,7 +1327,8 @@ li {
 }
 @media screen and (min-width: 768px) {
   .two-courses__content {
-    width: 33.9805825243vw;
+    width: 45.6310679612vw;
+    margin: 0;
     margin-bottom: 2.9126213592vw;
   }
 }
@@ -1280,13 +1338,18 @@ li {
     width: 21.875rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .two-courses__content-first {
+    margin: 0 0.9708737864vw;
+  }
+}
 .two-courses__content--second {
   margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   .two-courses__content--second {
     margin-bottom: 2.9126213592vw;
-    width: 33.9805825243vw;
+    width: 45.6310679612vw;
   }
 }
 @media screen and (min-width: 1030px) {
@@ -1347,12 +1410,14 @@ li {
   font-size: 8.2051282051vw;
   font-weight: bold;
   color: #fa7da3;
-  margin-bottom: 4.1025641026vw;
+  margin-bottom: 5.3025641026vw;
+  line-height: 1.6;
 }
 @media screen and (min-width: 768px) {
   .two-courses__two-course {
     font-size: 4.0533980583vw;
     margin-bottom: 3.0097087379vw;
+    line-height: 1.75;
   }
 }
 @media screen and (min-width: 1030px) {
@@ -1424,18 +1489,24 @@ li {
   font-size: 3.5897435897vw;
   line-height: 1.5;
 }
+.two-courses__text br {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .two-courses__text {
     margin-bottom: 1.4563106796vw;
-    letter-spacing: -0.0776699029vw;
+    letter-spacing: 0;
     font-size: 1.125rem;
+  }
+  .two-courses__text br {
+    display: block;
   }
 }
 @media screen and (min-width: 1030px) {
   .two-courses__text {
     margin-bottom: 0.9375rem;
-    letter-spacing: -0.05rem;
-    font-size: 0.875rem;
+    letter-spacing: 0;
+    font-size: 1.125rem;
   }
 }
 .two-courses__second {
@@ -1470,16 +1541,16 @@ li {
 }
 @media screen and (min-width: 768px) {
   .reviews {
-    padding: 3.5922330097vw 0 8.1553398058vw 0;
+    padding: 3.5922330097vw 0 8.2524271845vw 0;
   }
 }
 @media screen and (min-width: 1030px) {
   .reviews {
-    padding: 2.3125rem 0 5.25rem 0;
+    padding: 2.3125rem 0 5.3125rem 0;
   }
 }
 .reviews__container {
-  max-width: 953px;
+  max-width: 980px;
   margin-inline: auto;
 }
 .reviews__title {
@@ -1492,13 +1563,26 @@ li {
 @media screen and (min-width: 768px) {
   .reviews__title {
     font-size: 3.9805825243vw;
-    margin: 0 0 2.5242718447vw 0;
+    margin: 0 0 2.6796116505vw 0;
   }
 }
 @media screen and (min-width: 1030px) {
   .reviews__title {
     font-size: 2.5625rem;
-    margin: 0 0 1.625rem 0;
+    margin: 0 0 1.725rem 0;
+  }
+}
+.reviews__title-text {
+  margin: 0 2.3333333333vw;
+}
+@media screen and (min-width: 768px) {
+  .reviews__title-text {
+    margin: 0 1.5533980583vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__title-text {
+    margin: 0 1rem;
   }
 }
 .reviews__items .slick-slide {
@@ -1506,12 +1590,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .reviews__items .slick-slide {
-    padding: 0 0.7281553398vw;
+    padding: 0 0.8737864078vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .reviews__items .slick-slide {
-    padding: 0 0.46875rem;
+    padding: 0 0.5625rem;
   }
 }
 .reviews .slick-dots {
@@ -1598,7 +1682,7 @@ li {
 }
 .reviews__description {
   background-color: #fff;
-  padding: 2.5641025641vw 3.3333333333vw;
+  padding: 2.5641025641vw 3.4871794872vw 3.2820512821vw 3.5897435897vw;
   text-align: center;
   border: 1px solid #fa7da3;
   border-radius: 0 0 2.5641025641vw 2.5641025641vw;
@@ -1607,21 +1691,20 @@ li {
 }
 @media screen and (min-width: 768px) {
   .reviews__description {
-    padding: 0.7281553398vw 0;
+    padding: 1.2621359223vw 1.5339805825vw;
     border-radius: 0 0 0.9708737864vw 0.9708737864vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .reviews__description {
-    padding: 0.46875rem 0;
+    padding: 0.8125rem 0.875rem;
     border-radius: 0 0 0.625rem 0.625rem;
   }
 }
 .reviews__content {
   text-align: left;
   width: 45.641025641vw;
-  margin-left: 4.1025641026vw;
-  padding-top: 1.4358974359vw;
+  margin-left: 4.5025641026vw;
 }
 @media screen and (min-width: 768px) {
   .reviews__content {
@@ -1641,14 +1724,27 @@ li {
 }
 @media screen and (min-width: 768px) {
   .reviews__img {
-    width: 8.3495145631vw;
-    height: 11.067961165vw;
+    width: 7.572815534vw;
+    height: 10.9708737864vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .reviews__img {
-    width: 5.375rem;
-    height: 7.125rem;
+    width: 4.875rem;
+    height: 7.0625rem;
+  }
+}
+.reviews__image-star {
+  margin-bottom: 1.4358974359vw;
+}
+@media screen and (min-width: 768px) {
+  .reviews__image-star {
+    margin-bottom: 0.5048543689vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .reviews__image-star {
+    margin-bottom: 0.325rem;
   }
 }
 .reviews__reviewer-info {
@@ -1668,15 +1764,18 @@ li {
 .reviews__text {
   font-size: 3.5897435897vw;
   line-height: 1.5;
+  padding-top: 0.9743589744vw;
 }
 @media screen and (min-width: 768px) {
   .reviews__text {
     font-size: 1.359223301vw;
+    padding-top: 0.2427184466vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .reviews__text {
     font-size: 0.875rem;
+    padding-top: 0.15625rem;
   }
 }
 

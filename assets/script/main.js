@@ -4,13 +4,11 @@ $(() => {
     $('.reviews__items').slick({
         slidesToShow: 3,
         centerMode: true,
-        centerPadding: '0px', // 必要に応じて調整可
+        centerPadding: '0px',
         arrows: true,
         dots: false,
         variableWidth: false,
-
         arrows: false,
-
         infinite: false,
         customPaging: function (slider, i) {
             return '<span class="reviews__dot"></span>';
@@ -27,15 +25,6 @@ $(() => {
                 centerPadding: '40px',
                 }
             },
-            // {
-            //     breakpoint: 9999,
-            //     settings: {
-            //     dots: false,
-            //     centerMode: true,
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     }
-            // }
         ]
     });
 

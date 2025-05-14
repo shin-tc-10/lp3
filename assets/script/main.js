@@ -4,12 +4,14 @@ $(() => {
     $('.reviews__items').slick({
         slidesToShow: 3,
         centerMode: true,
-        centerPadding: '40px',
+        centerPadding: '0px', // 必要に応じて調整可
+        arrows: true,
+        dots: false,
+        variableWidth: false,
+
         arrows: false,
-        variableWidth: true,
-        dots: true,
+
         infinite: false,
-        speed: 500,
         customPaging: function (slider, i) {
             return '<span class="reviews__dot"></span>';
         },
@@ -18,18 +20,22 @@ $(() => {
                 breakpoint: 768,
                 settings: {
                 slidesToShow: 1,
+                dots: true,
+                initialSlide: 1,
+                variableWidth: true,
                 centerMode: true,
                 centerPadding: '40px',
                 }
             },
-            {
-                breakpoint: 9999,
-                settings: {
-                centerMode: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                }
-            }
+            // {
+            //     breakpoint: 9999,
+            //     settings: {
+            //     dots: false,
+            //     centerMode: true,
+            //     slidesToShow: 1,
+            //     slidesToScroll: 1,
+            //     }
+            // }
         ]
     });
 

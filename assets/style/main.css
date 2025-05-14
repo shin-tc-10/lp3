@@ -28,6 +28,13 @@ li {
 
 /* 変数 */
 /* ヘッダー */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  width: 100%;
+}
 .header__container {
   max-width: 1030px;
   margin-inline: auto;
@@ -173,15 +180,18 @@ li {
 .cover {
   background-color: #fa7da3;
   height: 80.2564102564vw;
+  margin-top: 15.5846153846vw;
 }
 @media screen and (min-width: 768px) {
   .cover {
     height: 59.4174757282vw;
+    margin-top: 8.932038835vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .cover {
     height: 38.25rem;
+    margin-top: 5.75rem;
   }
 }
 .cover__title {
@@ -1340,7 +1350,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .two-courses__content-first {
-    margin: 0 0.9708737864vw;
+    margin: 0 0.9708737864vw 0 0;
   }
 }
 .two-courses__content--second {

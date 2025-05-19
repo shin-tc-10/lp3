@@ -10,9 +10,6 @@ $(() => {
         variableWidth: false,
         arrows: false,
         infinite: false,
-        customPaging: function (slider, i) {
-            return '<span class="reviews__dot"></span>';
-        },
         responsive: [
             {
                 breakpoint: 768,
